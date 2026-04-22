@@ -1,0 +1,16 @@
+{
+  "name": "lord-fyt-ai",
+  "version": "1.0.0",
+  "description": "LORD-FYT AI - A fancy web AI chat powered by Groq",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "openai": "^4.56.0"
+  }
+}

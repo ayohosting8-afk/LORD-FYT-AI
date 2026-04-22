@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LORD-FYT AI — Your Intelligent Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="bg-image"></div>
+  <div class="bg-veil"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+  <div class="bg-grid"></div>
+
+  <audio id="bg-audio" src="background.mp3" loop preload="auto"></audio>
+  <button id="audio-toggle" class="audio-toggle" aria-label="Toggle music" title="Toggle music">
+    <svg id="ic-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+      <line x1="23" y1="9" x2="17" y2="15"/>
+      <line x1="17" y1="9" x2="23" y2="15"/>
+    </svg>
+    <svg id="ic-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+      <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+      <path d="M15.54 8.46a5 5 0 010 7.07"/>
+      <path d="M19.07 4.93a10 10 0 010 14.14"/>
+    </svg>
+  </button>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#a78bfa"/>
+                <stop offset="50%" stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+            <path d="M16 3 L29 27 H21 L16 17 L11 27 H3 Z" fill="url(#lg)"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>LORD-FYT AI</h1>
+          <span class="tag">Intelligent · Fast · Yours</span>
+        </div>
+      </div>
+      <div class="status">
+        <span class="dot"></span>
+        <span id="status-text">Online</span>
+      </div>
+    </header>
+
+    <main class="chat-shell">
+      <div id="messages" class="messages">
+        <div class="welcome">
+          <div class="welcome-glow"></div>
+          <h2>Hello, I'm <span class="grad-text">LORD-FYT AI</span></h2>
+          <p>Ask me anything — ideas, code, writing, learning. I'm here to help.</p>
+          <div class="suggestions">
+            <button class="chip" data-prompt="Explain quantum computing in simple terms">Explain quantum computing</button>
+            <button class="chip" data-prompt="Write a short poem about the ocean at midnight">Write a midnight poem</button>
+            <button class="chip" data-prompt="Give me 5 startup ideas in renewable energy">5 startup ideas</button>
+            <button class="chip" data-prompt="Help me plan a productive day">Plan my day</button>
+          </div>
+        </div>
+      </div>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <div class="input-wrap">
+          <textarea
+            id="input"
+            placeholder="Message LORD-FYT AI…"
+            rows="1"
+            maxlength="4000"
+          ></textarea>
+          <button type="submit" id="send" class="send" aria-label="Send">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 11.5L21 3l-8.5 18-2-8L3 11.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="composer-foot">
+          <span>Press <kbd>Enter</kbd> to send · <kbd>Shift</kbd>+<kbd>Enter</kbd> for newline</span>
+          <button type="button" id="clear" class="link">Clear chat</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
