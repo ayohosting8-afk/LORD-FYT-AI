@@ -3,7 +3,7 @@ const path = require("path");
 const { OpenAI } = require("openai");
 
 const PORT = process.env.PORT || 3000;
-const GROQ_API_KEY = process.env.GROQ_API_KEY || " ";
+const GROQ_API_KEY = process.env.GROQ_API_KEY || "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";
 const MODEL = process.env.MODEL || "llama-3.1-8b-instant";
 
 const groq = new OpenAI({
